@@ -227,13 +227,13 @@ class InstancesTest(testtools.TestCase):
         resp = mock.Mock()
         resp.status_code = 204
 
-        def fake_patch(url, body):
+        def fake_put(url, body):
             # Make sure we never pass slave_of to the API.
             self.assertIn('instance', body)
             self.assertNotIn('slave_of', body['instance'])
             return resp, None
 
-        self.instances.api.client.patch = mock.Mock(side_effect=fake_patch)
+        self.instances.api.client.put = mock.Mock(side_effect=fake_put)
         self.instances.edit(123)
         self.instances.edit(123, 321)
         self.instances.edit(123, 321, 'name-1234')

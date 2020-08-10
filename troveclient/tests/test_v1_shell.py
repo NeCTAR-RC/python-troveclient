@@ -182,7 +182,7 @@ class ShellTest(utils.TestCase):
 
     def test_instance_update(self):
         self.run_command('update 1234')
-        self.assert_called('PATCH', '/instances/1234')
+        self.assert_called('PUT', '/instances/1234')
 
     def test_resize_instance(self):
         self.run_command('resize-instance 1234 1')
@@ -198,7 +198,7 @@ class ShellTest(utils.TestCase):
 
     def test_detach_replica(self):
         self.run_command('detach-replica 1234')
-        self.assert_called('PATCH', '/instances/1234')
+        self.assert_called('PUT', '/instances/1234')
 
     def test_promote_to_replica_source(self):
         self.run_command('promote-to-replica-source 1234')
