@@ -1,0 +1,128 @@
+Source: python-troveclient
+Section: python
+Priority: extra
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: PKG OpenStack <openstack-devel@lists.alioth.debian.org>
+Uploaders:
+ Thomas Goirand <zigo@debian.org>,
+ Corey Bryant <corey.bryant@canonical.com>,
+ David Della Vecchia <ddv@canonical.com>,
+Build-Depends:
+ debhelper (>= 10~),
+ dh-python,
+ openstack-pkg-tools,
+ python-all,
+ python-pbr (>= 2.0.0),
+ python-setuptools,
+ python-sphinx (>= 1.6.2),
+ python3-all,
+ python3-pbr (>= 2.0.0),
+ python3-setuptools,
+ python3-sphinx (>= 1.6.2),
+Build-Depends-Indep:
+ python-babel (>= 2.3.4),
+ python-coverage (>= 4.0),
+ python-crypto,
+ python-fixtures (>= 3.0.0),
+ python-hacking (>= 0.12.0),
+ python-httplib2 (>= 0.9.1),
+ python-keystoneauth1 (>= 3.3.0),
+ python-mistralclient (>= 1:3.1.0),
+ python-mock (>= 2.0.0),
+ python-openstackclient (>= 3.12.0),
+ python-openstackdocstheme (>= 1.17.0),
+ python-osc-lib (>= 1.8.0),
+ python-oslo.i18n (>= 3.15.3),
+ python-oslo.utils (>= 3.33.0),
+ python-oslotest (>= 1:3.2.0),
+ python-prettytable (>= 0.7.1),
+ python-requests (>= 2.14.2),
+ python-requests-mock (>= 1.1.0),
+ python-simplejson (>= 3.5.1),
+ python-six (>= 1.10.0),
+ python-swiftclient (>= 1:3.2.0),
+ python-testrepository (>= 0.0.18),
+ python-testscenarios (>= 0.4),
+ python-testtools (>= 2.2.0),
+ python3-babel (>= 2.3.4),
+ python3-coverage (>= 4.0),
+ python3-crypto,
+ python3-fixtures (>= 3.0.0),
+ python3-hacking (>= 0.12.0),
+ python3-httplib2 (>= 0.9.1),
+ python3-keystoneauth1 (>= 3.3.0),
+ python3-mistralclient (>= 1:3.1.0),
+ python3-mock (>= 2.0.0),
+ python3-openstackclient (>= 3.12.0),
+ python3-openstackdocstheme (>= 1.17.0),
+ python3-osc-lib (>= 1.8.0),
+ python3-oslo.i18n (>= 3.15.3),
+ python3-oslo.utils (>= 3.33.0),
+ python3-oslotest (>= 1:3.2.0),
+ python3-prettytable (>= 0.7.1),
+ python3-requests (>= 2.14.2),
+ python3-requests-mock (>= 1.1.0),
+ python3-simplejson (>= 3.5.1),
+ python3-six (>= 1.10.0),
+ python3-swiftclient (>= 1:3.2.0),
+ python3-testrepository (>= 0.0.18),
+ python3-testscenarios (>= 0.4),
+ python3-testtools (>= 2.2.0),
+ testrepository,
+Standards-Version: 4.1.2
+Vcs-Browser: https://git.launchpad.net/~ubuntu-server-dev/ubuntu/+source/python-troveclient
+Vcs-Git: git://git.launchpad.net/~ubuntu-server-dev/ubuntu/+source/python-troveclient
+Homepage: http://www.openstack.org
+XS-Testsuite: autopkgtest
+
+Package: python-troveclient
+Architecture: all
+Depends:
+ python-babel (>= 2.3.4),
+ python-keystoneauth1 (>= 3.3.0),
+ python-mistralclient (>= 1:3.1.0),
+ python-osc-lib (>= 1.8.0),
+ python-oslo.i18n (>= 3.15.3),
+ python-oslo.utils (>= 3.33.0),
+ python-pbr (>= 2.0.0),
+ python-prettytable (>= 0.7.1),
+ python-requests (>= 2.14.2),
+ python-simplejson (>= 3.5.1),
+ python-six (>= 1.10.0),
+ python-swiftclient (>= 1:3.2.0),
+ ${misc:Depends},
+ ${python:Depends},
+Description: Client for OpenStack Database as a Service - Python 2.7
+ Trove is Database as a Service for OpenStack. It's designed to run entirely on
+ OpenStack, with the goal of allowing users to quickly and easily utilize the
+ features of a relational database without the burden of handling complex
+ administrative tasks. Cloud users and database administrators can provision
+ and manage multiple database instances as needed.
+ .
+ This package contains the Python 2.7 module.
+
+Package: python3-troveclient
+Architecture: all
+Depends:
+ python3-babel (>= 2.3.4),
+ python3-keystoneauth1 (>= 3.3.0),
+ python3-mistralclient (>= 1:3.1.0),
+ python3-osc-lib (>= 1.8.0),
+ python3-oslo.i18n (>= 3.15.3),
+ python3-oslo.utils (>= 3.33.0),
+ python3-pbr (>= 2.0.0),
+ python3-prettytable (>= 0.7.1),
+ python3-requests (>= 2.14.2),
+ python3-simplejson (>= 3.5.1),
+ python3-six (>= 1.10.0),
+ python3-swiftclient (>= 1:3.2.0),
+ ${misc:Depends},
+ ${python3:Depends},
+Description: Client for OpenStack Database as a Service - Python 3.x
+ Trove is Database as a Service for OpenStack. It's designed to run entirely on
+ OpenStack, with the goal of allowing users to quickly and easily utilize the
+ features of a relational database without the burden of handling complex
+ administrative tasks. Cloud users and database administrators can provision
+ and manage multiple database instances as needed.
+ .
+ This package contains the Python 3.x module.
